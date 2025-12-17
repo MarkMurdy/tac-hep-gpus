@@ -1,0 +1,128 @@
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/nvtx_sum.py]... 
+SKIPPED: stencil_mat_alpaka.sqlite does not contain NV Tools Extension (NVTX) data.
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/osrt_sum.py]... 
+
+ ** OS Runtime Summary (osrt_sum):
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)    Min (ns)   Max (ns)     StdDev (ns)            Name         
+ --------  ---------------  ---------  ------------  ------------  --------  -----------  -------------  ----------------------
+     80.2    1,241,266,545         41  30,274,793.8  10,102,221.0     4,600  714,954,920  110,676,104.0  poll                  
+     18.4      284,531,809        652     436,398.5      40,540.0     1,720   51,944,653    2,242,384.9  ioctl                 
+      0.8       12,079,756         32     377,492.4      45,320.0    20,180    8,583,745    1,503,492.0  mmap64                
+      0.2        2,762,560         10     276,256.0      92,645.5    53,070    1,397,995      421,933.7  sem_timedwait         
+      0.1        2,238,659         18     124,369.9      34,725.0    12,570    1,191,024      282,595.3  mmap                  
+      0.1        1,143,824          2     571,912.0     571,912.0   504,182      639,642       95,784.7  pthread_create        
+      0.1        1,115,486         57      19,569.9      14,660.0     6,210       48,170        9,645.8  open64                
+      0.0          692,222         35      19,777.8      14,120.0     4,520       64,050       15,191.9  fopen                 
+      0.0          588,661         28      21,023.6      21,355.0     2,680       61,830       11,937.5  fclose                
+      0.0          183,101          1     183,101.0     183,101.0   183,101      183,101            0.0  fgets                 
+      0.0          108,540         35       3,101.1       1,750.0     1,010       13,830        3,165.6  close                 
+      0.0           92,841          6      15,473.5      15,260.5     6,520       23,860        6,870.2  open                  
+      0.0           84,600          1      84,600.0      84,600.0    84,600       84,600            0.0  pthread_cond_wait     
+      0.0           81,010         52       1,557.9       1,475.0     1,010        2,700          468.6  fcntl                 
+      0.0           78,320         12       6,526.7       6,625.0     1,300       17,160        4,118.9  write                 
+      0.0           72,970          3      24,323.3      24,980.0    16,620       31,370        7,396.9  munmap                
+      0.0           62,410          7       8,915.7       5,630.0     2,080       18,820        6,749.7  fwrite                
+      0.0           55,350          2      27,675.0      27,675.0    23,450       31,900        5,975.1  socket                
+      0.0           54,661          3      18,220.3      21,970.0    10,340       22,351        6,827.2  pipe2                 
+      0.0           52,671         15       3,511.4       3,510.0     1,880        6,510        1,317.4  read                  
+      0.0           30,240          1      30,240.0      30,240.0    30,240       30,240            0.0  connect               
+      0.0           25,000          2      12,500.0      12,500.0     7,090       17,910        7,650.9  putc                  
+      0.0            5,620          1       5,620.0       5,620.0     5,620        5,620            0.0  pthread_cond_broadcast
+      0.0            5,260          5       1,052.0       1,040.0     1,010        1,100           45.5  dup                   
+      0.0            3,950          1       3,950.0       3,950.0     3,950        3,950            0.0  bind                  
+      0.0            2,090          1       2,090.0       2,090.0     2,090        2,090            0.0  listen                
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/cuda_api_sum.py]... 
+
+ ** CUDA API Summary (cuda_api_sum):
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)    Med (ns)   Min (ns)   Max (ns)   StdDev (ns)               Name             
+ --------  ---------------  ---------  -----------  ---------  --------  ----------  -----------  ------------------------------
+     69.9       20,536,674          5  4,107,334.8    6,620.0     2,130  20,510,674  9,169,746.8  cudaMallocAsync_v11020        
+     13.0        3,818,996          5    763,799.2    6,930.0     6,290   3,780,126  1,686,187.1  cudaHostAlloc                 
+      9.2        2,705,581          5    541,116.2   15,750.0     5,790   2,650,040  1,178,955.6  cudaFreeHost                  
+      2.8          810,814          3    270,271.3   45,461.0     8,550     756,803    421,752.8  cudaLaunchKernel              
+      2.7          782,343          1    782,343.0  782,343.0   782,343     782,343          0.0  cuLibraryLoadData             
+      0.9          263,491          3     87,830.3   14,250.0     7,730     241,511    133,131.3  cudaStreamSynchronize         
+      0.6          176,480          8     22,060.0    9,175.0     6,100     103,280     33,086.0  cudaMemcpyAsync               
+      0.5          135,511          1    135,511.0  135,511.0   135,511     135,511          0.0  cudaMemGetInfo                
+      0.2           58,380          1     58,380.0   58,380.0    58,380      58,380          0.0  cudaStreamCreate              
+      0.2           53,450          2     26,725.0   26,725.0    20,960      32,490      8,152.9  cudaStreamDestroy             
+      0.1           15,460          1     15,460.0   15,460.0    15,460      15,460          0.0  cudaStreamCreateWithFlags     
+      0.1           15,020          5      3,004.0    2,140.0     1,590       7,340      2,443.1  cudaFreeAsync_v11020          
+      0.0            2,400          2      1,200.0    1,200.0     1,150       1,250         70.7  cuLibraryGetKernel            
+      0.0            1,550          1      1,550.0    1,550.0     1,550       1,550          0.0  cuModuleGetLoadingMode        
+      0.0            1,450          3        483.3      460.0       260         730        235.9  cuKernelGetName               
+      0.0              880          1        880.0      880.0       880         880          0.0  cudaGetDeviceProperties_v12000
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/cuda_gpu_kern_sum.py]... 
+
+ ** CUDA GPU Kernel Summary (cuda_gpu_kern_sum):
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)                                                  Name                                                
+ --------  ---------------  ---------  --------  --------  --------  --------  -----------  ----------------------------------------------------------------------------------------------------
+     53.2            6,624          2   3,312.0   3,312.0     3,232     3,392        113.1  void alpaka::detail::gpuKernel<stencil_2d, alpaka::AccGpuUniformCudaHipRt<alpaka::ApiCudaRt, std::i…
+     46.8            5,824          1   5,824.0   5,824.0     5,824     5,824          0.0  void alpaka::detail::gpuKernel<matmul, alpaka::AccGpuUniformCudaHipRt<alpaka::ApiCudaRt, std::integ…
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/cuda_gpu_mem_time_sum.py]... 
+
+ ** CUDA GPU MemOps Summary (by Time) (cuda_gpu_mem_time_sum):
+
+ Time (%)  Total Time (ns)  Count  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  --------  --------  --------  --------  -----------  ----------------------------
+     69.2           19,296      5   3,859.2   3,552.0     3,424     5,120        709.3  [CUDA memcpy Host-to-Device]
+     30.8            8,607      3   2,869.0   2,784.0     2,783     3,040        148.1  [CUDA memcpy Device-to-Host]
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/cuda_gpu_mem_size_sum.py]... 
+
+ ** CUDA GPU MemOps Summary (by Size) (cuda_gpu_mem_size_sum):
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+      0.092      5     0.018     0.018     0.018     0.018        0.000  [CUDA memcpy Host-to-Device]
+      0.055      3     0.018     0.018     0.018     0.018        0.000  [CUDA memcpy Device-to-Host]
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/openmp_sum.py]... 
+SKIPPED: stencil_mat_alpaka.sqlite does not contain OpenMP event data.
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/opengl_khr_range_sum.py]... 
+SKIPPED: stencil_mat_alpaka.sqlite does not contain KHR Extension (KHR_DEBUG) data.
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/opengl_khr_gpu_range_sum.py]... 
+SKIPPED: stencil_mat_alpaka.sqlite does not contain GPU KHR Extension (KHR_DEBUG) data.
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/vulkan_marker_sum.py]... 
+SKIPPED: stencil_mat_alpaka.sqlite does not contain Vulkan Debug Extension (Vulkan Debug Util) data.
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/vulkan_gpu_marker_sum.py]... 
+SKIPPED: stencil_mat_alpaka.sqlite does not contain GPU Vulkan Debug Extension (GPU Vulkan Debug markers) data.
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/dx11_pix_sum.py]... 
+SKIPPED: stencil_mat_alpaka.sqlite does not contain DX11 CPU debug markers.
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/dx12_gpu_marker_sum.py]... 
+SKIPPED: stencil_mat_alpaka.sqlite does not contain DX12 GPU debug markers.
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/dx12_pix_sum.py]... 
+SKIPPED: stencil_mat_alpaka.sqlite does not contain DX12 CPU debug markers.
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/wddm_queue_sum.py]... 
+SKIPPED: stencil_mat_alpaka.sqlite does not contain WDDM context data.
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/um_sum.py]... 
+SKIPPED: stencil_mat_alpaka.sqlite does not contain CUDA Unified Memory CPU page faults data.
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/um_total_sum.py]... 
+SKIPPED: stencil_mat_alpaka.sqlite does not contain CUDA Unified Memory CPU page faults data.
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/um_cpu_page_faults_sum.py]... 
+SKIPPED: stencil_mat_alpaka.sqlite does not contain CUDA Unified Memory CPU page faults data.
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/openacc_sum.py]... 
+SKIPPED: stencil_mat_alpaka.sqlite does not contain OpenACC event data.
+
+Processing [stencil_mat_alpaka.sqlite] with [/opt/nvidia/hpc_sdk/Linux_x86_64/25.9/profilers/13.0/Nsight_Systems/host-linux-x64/reports/syscall_sum.py]... 
+SKIPPED: stencil_mat_alpaka.sqlite does not contain syscall data.
+
