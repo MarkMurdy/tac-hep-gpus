@@ -30,7 +30,7 @@ __global__ void stencil_2d(int *in, int *out) {
 		temp[lindex_x][lindex_y - RADIUS] = in[gindex_x*size + gindex_y - RADIUS];
 		temp[lindex_x][lindex_y + BLOCK_SIZE] = in[gindex_x*size + gindex_y + BLOCK_SIZE];
 	}
-
+	__syncthreads();
 
 	// Apply the stencil
 	int result = 0;
@@ -38,8 +38,8 @@ __global__ void stencil_2d(int *in, int *out) {
 		result += temp[lindex_x + offset][lindex_y];
 		result += temp[lindex_x][lindex_y + offset];
 	}
+	result -= temp[lindex_x][lindex_y];
 
-	__syncthreads();
 	// Store the result
 	out[gindex_y+size*gindex_x] = result;
 }
@@ -105,6 +105,20 @@ int main(void) {
 				}
 			}
 		}
+	}
+
+	for (int i = 0; i < 10; i++) {
+		for (int j = 0; j < 10; j++) {
+			printf("%d ", in[(N+2*RADIUS)*i + j]);
+		}
+		printf("\n");
+	}
+
+	for (int i = 0; i < 10; i++) {
+		for (int j = 0; j < 10; j++) {
+			printf("%d ", out[(N+2*RADIUS)*i + j]);
+		}
+		printf("\n");
 	}
 
 	// Cleanup
