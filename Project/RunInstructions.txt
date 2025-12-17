@@ -1,0 +1,9 @@
+To run, run the Makefile with "make".
+
+Run the following files with the below commands:
+ - stencil_mat.cc : ./stencil_mat_cpu
+ - stencil_mat.cu : ./stencil_mat_cuda
+ - stencil_mat_optimized.cu : ./stencil_mat_optimized_cuda
+ - stencil_mat_alpaka.cc : ./stencil_mat_alpaka
+
+Results from profiling are saved in ProfileLogs.
